@@ -37,7 +37,7 @@ void output_row(const unsigned char *str, int column) {
         printf("%s\n", str);
 }
 
-void output_unknown_command(const char *error) { printf("%s\n", error); }
+void output_unknown_command(const unsigned char *error) { printf("%s\n", error); }
 
 void exception(const unsigned char *error_text) {
     fprintf(stderr, "Error. %s\n", error_text);

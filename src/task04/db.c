@@ -88,7 +88,7 @@ void work_with_db() {
         } else if (menu_choice == SHOWALL)
             _db_showall(db);
         else if (menu_choice == ADD) {
-            InsertString InsertStr = {0, 0, 0};
+            InsertString InsertStr = {{0}, {0}, {0}};
             scan_correct_sql_row(&InsertStr);
             _db_add_row(db, InsertStr);
         } else if (menu_choice == REMOVE) {
