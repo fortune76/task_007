@@ -78,7 +78,7 @@ void _db_delete_row(sqlite3 *db, char *id) {
 void _db_close(sqlite3 *db) { sqlite3_close(db); }
 
 void work_with_db() {
-    sqlite3 *db = _db_init("../data-samples/task007.db");
+    sqlite3 *db = _db_init("data-samples/task007.db");
     int menu_choice = menu();
     while (menu_choice != EXIT) {
         if (menu_choice == SHOW) {
