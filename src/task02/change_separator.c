@@ -8,7 +8,6 @@ int main() {
 void change_separator() {
     char str[MAX_LEN_STR] = {0};
     fgets(str, MAX_LEN_STR - 1, stdin);
-    str[-1] = 0;
     char new_sep = 0;
     scanf("%c", &new_sep);
     int len = strlen(str);

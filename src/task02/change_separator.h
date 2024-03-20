@@ -7,5 +7,4 @@
 
 void change_separator();
 
-
 #endif

@@ -12,7 +12,8 @@ void binary_div() {
     strcpy(tmp_str, input_str);
     while (strlen(tmp_str) > 1) {
         printf("%s\n", tmp_str);
-        int len = (strlen(tmp_str) / 2) == (float)strlen(tmp_str) / 2 ? strlen(tmp_str) / 2 : strlen(tmp_str) / 2 + 1;
+        int len = (strlen(tmp_str) / 2) == (float)strlen(tmp_str) / 2 ? strlen(tmp_str) / 2
+                                                                      : strlen(tmp_str) / 2 + 1;
         memset(tmp_str, 0, MAX_LEN_STR - 1);
         for (int i = 0; i < len; i++) {
             tmp_str[i] = input_str[i];
