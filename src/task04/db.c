@@ -40,7 +40,7 @@ void _db_show_row(sqlite3 *db, char *id) {
         }
     } else {
         const unsigned char error_text[MAX_LEN_STR] = "NO DATA";
-        output_unknown_command(error_text);
+        output_error(error_text);
     }
     sqlite3_finalize(stmt);
 }
@@ -70,7 +70,7 @@ void _db_delete_row(sqlite3 *db, char *id) {
     }
     if (sqlite3_step(stmt) != SQLITE_DONE) {
         const unsigned char error_text[MAX_LEN_STR] = "NO DATA";
-        output_unknown_command(error_text);
+        output_error(error_text);
     }
     sqlite3_finalize(stmt);
 }
@@ -97,7 +97,7 @@ void work_with_db() {
             _db_delete_row(db, id);
         } else {
             const unsigned char error_text[MAX_LEN_STR] = "UNKNOWN COMMAND";
-            output_unknown_command(error_text);
+            output_error(error_text);
         }
         menu_choice = menu();
     }

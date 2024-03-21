@@ -18,7 +18,7 @@ int menu();
 void scan_char(char *char_id);
 void scan_correct_sql_row(InsertString *InsertStr);
 void output_row(const unsigned char *str, int column);
-void output_unknown_command(const unsigned char *error);
+void output_error(const unsigned char *error);
 void exception(const unsigned char *error_text);
 
 #endif
